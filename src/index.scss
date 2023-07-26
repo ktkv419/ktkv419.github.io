@@ -1,0 +1,66 @@
+@import './assets/fonts/fonts.scss';
+
+:root {
+  // --fz-h1: 3.6rem;
+  // --fz-h2: 2.4rem;
+  // --fz-h3: 2rem;
+  // --fz-h4: 1.6rem;
+
+  // --lh-h1: 4.8rem;
+  // --lh-h2: 3.2rem;
+  // --lh-h3: 2.8rem;
+  // --lh-h4: 2.2rem;
+
+  --color-white: #ffffff;
+  --color-black: #212529;
+  --color-grey: #7b7b7b;
+
+  --color-black-inactive: #212529cc;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Stolzl', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  // background-color: black;
+}
+
+body {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  background-color: var(--color-white);
+  // width: 39rem;
+  // height: 66rem;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.92rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  line-height: 1.68rem;
+}
+
+#root {
+  height: 100%;
+}

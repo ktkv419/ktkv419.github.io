@@ -1,0 +1,52 @@
+.tutorial-container {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.tutorial {
+  position: absolute;
+  padding: 2.8rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__text {
+    margin-top: 2rem;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .btn {
+    &--primary {
+      width: 100%;
+    }
+
+    &--light {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__img {
+    width: 72.5%;
+  }
+
+  &__desc {
+    color: var(--color-grey);
+    font-weight: 400;
+  }
+}
