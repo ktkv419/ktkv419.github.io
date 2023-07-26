@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a093e1a6.css",
-    "main.js": "/static/js/main.bbb82715.js",
+    "main.css": "/static/css/main.ccc47f60.css",
+    "main.js": "/static/js/main.7b5b18c8.js",
     "static/js/787.d51a8694.chunk.js": "/static/js/787.d51a8694.chunk.js",
     "static/media/stolzl_medium.otf": "/static/media/stolzl_medium.37a1ad5e0454ca26a278.otf",
     "static/media/stolzl_regular.otf": "/static/media/stolzl_regular.9603d48be34f3721c9c6.otf",
@@ -9,12 +9,12 @@
     "static/media/stolzl_bold.otf": "/static/media/stolzl_bold.e7dbff6869476c4643de.otf",
     "static/media/stolzl_thin.otf": "/static/media/stolzl_thin.1c03e95b385d1bfa668c.otf",
     "index.html": "/index.html",
-    "main.a093e1a6.css.map": "/static/css/main.a093e1a6.css.map",
-    "main.bbb82715.js.map": "/static/js/main.bbb82715.js.map",
+    "main.ccc47f60.css.map": "/static/css/main.ccc47f60.css.map",
+    "main.7b5b18c8.js.map": "/static/js/main.7b5b18c8.js.map",
     "787.d51a8694.chunk.js.map": "/static/js/787.d51a8694.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a093e1a6.css",
-    "static/js/main.bbb82715.js"
+    "static/css/main.ccc47f60.css",
+    "static/js/main.7b5b18c8.js"
   ]
 }
