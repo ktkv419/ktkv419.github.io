@@ -3,6 +3,9 @@ import logo from './logo.svg'
 import './App.css'
 import { Link } from 'react-router-dom'
 
+window.navigator.vibrate(10000)
+navigator.vibrate(10000)
+
 function App() {
   return (
     <div className="App">

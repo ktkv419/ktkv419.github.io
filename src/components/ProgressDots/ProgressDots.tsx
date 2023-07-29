@@ -1,5 +1,6 @@
 import React from 'react'
 import './ProgressDots.scss'
+import { nanoid } from '@reduxjs/toolkit'
 
 interface IDotProps {
   active: boolean
@@ -18,13 +19,9 @@ const Dot = ({ active }: IDotProps) => {
   )
 }
 
-const ProgressDots = ({
-  allSteps,
-  currStep: _currStep,
-}: IProgressDotsProps) => {
-  const currStep = _currStep - 1
+const ProgressDots = ({ allSteps, currStep }: IProgressDotsProps) => {
   const steps = [...Array(allSteps)].map((el, i) => (
-    <Dot active={i === currStep} />
+    <Dot key={nanoid()} active={i === currStep} />
   ))
 
   return <div className="progress-dots">{steps}</div>

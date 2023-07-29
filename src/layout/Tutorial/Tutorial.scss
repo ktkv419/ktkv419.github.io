@@ -1,17 +1,18 @@
+@import '../../assets/css/mixins.scss';
+
 .tutorial-container {
   position: relative;
   height: 100vh;
-  width: 100vw;
   overflow: hidden;
+  display: flex;
 }
 
 .tutorial {
-  position: absolute;
+  width: 100vw;
   padding: 2.8rem;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
   text-align: center;
 
   &__content {
@@ -23,30 +24,69 @@
 
   &__text {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__input {
+    margin-top: 2rem;
   }
 
   &__btn-container {
     display: flex;
     flex-direction: column;
+    align-self: end;
     gap: 2rem;
   }
 
   .btn {
     &--primary {
       width: 100%;
+      @include h2;
     }
 
     &--light {
-      font-size: 1.2rem;
+      @include h3;
+      position: relative;
+      align-self: center;
+
+      &::before,
+      &::after {
+        content: '';
+        width: 0.4rem;
+        height: 0.1rem;
+        border-radius: 50rem;
+        background-color: var(--color-grey);
+        position: absolute;
+        right: -1rem;
+        top: 50%;
+        rotate: 90deg;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        top: 57%;
+      }
+
+      &::after {
+        top: 43%;
+        transform: rotate(-45deg);
+      }
     }
   }
 
   &__img {
-    width: 72.5%;
+    // height: auto;
+    // width: 85%;
+    height: 40vh;
+    width: auto;
+    margin-top: auto;
   }
 
   &__desc {
     color: var(--color-grey);
     font-weight: 400;
+    @include h2;
   }
 }

@@ -1,0 +1,14 @@
+@mixin h1 {
+  font-size: var(--fz-h1);
+  line-height: var(--lh-h1);
+}
+
+@mixin h2 {
+  font-size: var(--fz-h2);
+  line-height: var(--lh-h2);
+}
+
+@mixin h3 {
+  font-size: var(--fz-h3);
+  line-height: var(--lh-h3);
+}

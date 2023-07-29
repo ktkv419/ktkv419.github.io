@@ -4,6 +4,7 @@ import reportWebVitals from './reportWebVitals'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Tutorial from './layout/Tutorial/Tutorial'
 import './index.scss'
+import Debug from './layout/Debug'
 
 export const tg = window.Telegram.WebApp
 
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Tutorial />,
+  },
+  {
+    path: '/debug',
+    element: <Debug />,
   },
 ])
 

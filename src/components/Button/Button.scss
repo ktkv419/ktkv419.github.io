@@ -2,7 +2,12 @@
   outline: none;
   border: none;
   background: none;
-  transition: background-color 0.5s;
+  transition: all 0.5s;
+  transform: scale(1);
+
+  &:active {
+    transform: scale(0.98);
+  }
 
   &--primary {
     background: var(--color-black);
