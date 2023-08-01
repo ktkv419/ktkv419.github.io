@@ -20,6 +20,10 @@
     color: var(--color-grey);
   }
 
+  &--hollow {
+    background-color: red;
+  }
+
   &--disabled {
     background: #212529cc;
     pointer-events: none;

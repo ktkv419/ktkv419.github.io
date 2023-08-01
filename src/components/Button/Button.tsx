@@ -5,6 +5,7 @@ interface IButtonProps extends PropsWithChildren {
   disabled?: boolean
   type?: 'primary' | 'light'
   onClick?: () => void
+  className?: string
 }
 
 const Button = ({
@@ -12,15 +13,16 @@ const Button = ({
   disabled = false,
   type = 'primary',
   onClick,
+  className,
 }: IButtonProps) => {
   const disabledClass = disabled ? 'btn--disabled' : ''
-  const typeClass = type === 'primary' ? 'btn--primary' : 'btn--light'
-  const className = `btn ${[disabledClass, typeClass]
+  const typeClass = `btn--${type}`
+  const classList = `btn ${[disabledClass, typeClass, className]
     .filter((el) => el !== '')
     .join(' ')}`
 
   return (
-    <button className={className} onClick={onClick}>
+    <button className={classList} onClick={onClick}>
       {children}
     </button>
   )

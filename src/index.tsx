@@ -5,6 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Tutorial from './layout/Tutorial/Tutorial'
 import './index.scss'
 import Debug from './layout/Debug'
+import Menu from './layout/Menu/Menu'
 
 export const tg = window.Telegram.WebApp
 
@@ -14,8 +15,12 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/tutorial',
     element: <Tutorial />,
+  },
+  {
+    path: '/',
+    element: <Menu />,
   },
   {
     path: '/debug',

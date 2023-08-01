@@ -1,0 +1,27 @@
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 1.6rem 2.2rem;
+
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  .slider__btn {
+    background-color: transparent;
+    border: none;
+    outline: solid 1px;
+    outline-color: #f5f5f5;
+    color: var(--color-black);
+    padding: 0.6rem 1.5rem;
+    transition: all 1s;
+
+    &--active {
+      outline-color: var(--color-black);
+    }
+  }
+}
