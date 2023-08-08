@@ -1,27 +1,32 @@
-import React, { useState } from 'react'
+import React, { SetStateAction, useState } from 'react'
 import Button from '../Button/Button'
 import './Slider.scss'
 import { nanoid } from '@reduxjs/toolkit'
 
-const menuMock = ['Кофе', 'Напитки', 'Десерты', 'Салаты', 'Выпечка']
+interface ISlider {
+  prop: string
+  setProp: React.Dispatch<SetStateAction<string>>
+  items: string[]
+}
 
-const Slider = () => {
-  const [currentMenu, setCurrentMenu] = useState('Кофе')
+const Slider = ({ items, setProp, prop }: ISlider) => {
   const onMenuClick = (menu: string) => {
-    setCurrentMenu(menu)
+    setProp(menu)
   }
 
-  const renderedMenu = menuMock.map((el) => (
+  const classes = `slider ${items.length > 3 ? 'slider--wide' : ''}`
+
+  const renderedMenu = items.map((el) => (
     <Button
       key={nanoid()}
-      className={`slider__btn ${el === currentMenu && 'slider__btn--active'}`}
+      className={`slider__btn ${el === prop && 'slider__btn--active'}`}
       onClick={() => onMenuClick(el)}
     >
       {el}
     </Button>
   ))
 
-  return <div className="slider">{renderedMenu}</div>
+  return <div className={classes}>{renderedMenu}</div>
 }
 
 export default Slider

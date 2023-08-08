@@ -1,0 +1,40 @@
+.menu-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 10px 0px #0000001a;
+  cursor: pointer;
+  &__favorite {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+  }
+
+  &__picture {
+    width: 55%;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__background {
+    // display: none;
+    z-index: -1;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+
+  &__title,
+  &__price {
+    align-self: start;
+    line-height: 1.1;
+    font-size: var(--fz-h1);
+  }
+}

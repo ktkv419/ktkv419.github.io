@@ -1,0 +1,25 @@
+.nav {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-black);
+  width: 90%;
+  height: 4.6rem;
+  border-radius: 50rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 6rem;
+  &__btn {
+    background: none;
+    color: white;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 2rem;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import Tutorial from './layout/Tutorial/Tutorial'
 import './index.scss'
 import Debug from './layout/Debug'
 import Menu from './layout/Menu/Menu'
+import App from './App'
 
 export const tg = window.Telegram.WebApp
 
@@ -18,9 +19,11 @@ const router = createBrowserRouter([
     path: '/tutorial',
     element: <Tutorial />,
   },
+
   {
     path: '/',
-    element: <Menu />,
+    element: <App />,
+    children: [{ index: true, element: <Menu /> }],
   },
   {
     path: '/debug',

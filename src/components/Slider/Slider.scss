@@ -1,18 +1,26 @@
 .slider {
   display: flex;
   flex-wrap: nowrap;
-  gap: 1rem;
   padding: 1.6rem 2.2rem;
 
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: none;
+  gap: 1rem;
+
+  &--wide {
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    .slider__btn {
+      flex-grow: 0;
+    }
   }
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 
   .slider__btn {
     background-color: transparent;
+    flex-grow: 1;
     border: none;
     outline: solid 1px;
     outline-color: #f5f5f5;
