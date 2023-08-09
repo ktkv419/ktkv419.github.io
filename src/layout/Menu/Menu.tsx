@@ -3,7 +3,7 @@ import Slider from '../../components/Slider/Slider'
 import './Menu.scss'
 import { IItem } from '../../utils/types'
 import { nanoid } from '@reduxjs/toolkit'
-import MenuLayout from '../../components/MenuLayout/MenuLayout'
+import MenuItem from '../../components/MenuItem/MenuItem'
 
 interface IMenuCategory {
   name: string
@@ -67,14 +67,16 @@ const Menu = () => {
   const allCategories = menuMock.map((el) => el.name)
   const currentMenu = menuMock.find((el) => el.name === category)?.items
 
+  const renderMenu = (items: IItem[]) => {
+    return items?.map((item) => <MenuItem key={nanoid()} {...item} />)
+  }
+
   return (
-    <>
+    <div className="menu">
       <Slider prop={category} setProp={setCategory} items={allCategories} />
 
-      <div className="menu__layout">
-        <MenuLayout items={currentMenu} />
-      </div>
-    </>
+      <div className="menu__layout">{renderMenu(currentMenu || [])}</div>
+    </div>
   )
 }
 

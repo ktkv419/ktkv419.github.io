@@ -4,7 +4,6 @@ import reportWebVitals from './reportWebVitals'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Tutorial from './layout/Tutorial/Tutorial'
 import './index.scss'
-import Debug from './layout/Debug'
 import Menu from './layout/Menu/Menu'
 import App from './App'
 
@@ -19,15 +18,10 @@ const router = createBrowserRouter([
     path: '/tutorial',
     element: <Tutorial />,
   },
-
   {
     path: '/',
     element: <App />,
     children: [{ index: true, element: <Menu /> }],
-  },
-  {
-    path: '/debug',
-    element: <Debug />,
   },
 ])
 

@@ -1,10 +1,9 @@
 .menu {
-  // padding: 1.6rem 2.2rem;
-
   &__layout {
     padding: 1.6rem 2.2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.6rem;
   }
+  padding-bottom: 5rem;
 }
