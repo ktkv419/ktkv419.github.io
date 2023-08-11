@@ -4,6 +4,7 @@
   background: none;
   transition: all 0.5s;
   transform: scale(1);
+  cursor: pointer;
 
   &:active {
     transform: scale(0.98);

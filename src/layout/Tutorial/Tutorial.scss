@@ -2,7 +2,7 @@
 
 .tutorial-container {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   display: flex;
 }
@@ -78,9 +78,7 @@
 
   &__img {
     // height: auto;
-    // width: 85%;
-    height: 40vh;
-    width: auto;
+    width: 85%;
     margin-top: auto;
   }
 
