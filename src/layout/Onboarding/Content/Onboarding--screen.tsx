@@ -2,6 +2,7 @@ import { nanoid } from '@reduxjs/toolkit'
 import ProgressDots from '../../../components/ProgressDots/ProgressDots'
 import Button from '../../../components/Button/Button'
 import { Dispatch, SetStateAction } from 'react'
+import ButtonLight from '../../../components/ButtonLight/ButtonLight'
 
 export interface ITutorialContentProps {
   stage: number
@@ -11,7 +12,7 @@ export interface ITutorialContentProps {
   image: string
 }
 
-const TutorialContent = ({
+const OnboardingScreen = ({
   setStage,
   stage,
   title,
@@ -19,16 +20,16 @@ const TutorialContent = ({
   image,
 }: ITutorialContentProps) => {
   return (
-    <div key={nanoid()} className="tutorial">
-      <div className="tutorial__content">
-        <img src={image} className="tutorial__img" alt="" />
-        <ProgressDots allSteps={5} currStep={stage} />
+    <div key={nanoid()} className="onboarding">
+      <div className="onboarding__content">
+        <img src={image} className="onboarding__img" alt="" />
+        <ProgressDots currStep={stage} />
       </div>
-      <div className="tutorial__text">
-        <h1 className="tutorial__title">{title}</h1>
-        <p className="tutorial__desc">{desc}</p>
+      <div className="onboarding__text">
+        <h1 className="onboarding__title">{title}</h1>
+        <p className="onboarding__desc">{desc}</p>
       </div>
-      <div className="tutorial__btn-container">
+      <div className="onboarding__btn-container">
         <Button
           onClick={() => {
             setStage((stage) => (stage += 1))
@@ -36,17 +37,16 @@ const TutorialContent = ({
         >
           Продолжить
         </Button>
-        <Button
-          type="light"
+        <ButtonLight
           onClick={() => {
             setStage(4)
           }}
         >
-          Пропустить
-        </Button>
+          Пропустить <img src="/icons/arrow.svg" alt="" />
+        </ButtonLight>
       </div>
     </div>
   )
 }
 
-export default TutorialContent
+export default OnboardingScreen

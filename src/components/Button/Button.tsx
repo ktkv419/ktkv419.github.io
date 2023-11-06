@@ -1,23 +1,14 @@
-import React, { PropsWithChildren } from 'react'
+import { PropsWithChildren } from 'react'
 import './Button.scss'
 
 interface IButtonProps extends PropsWithChildren {
   disabled?: boolean
-  type?: 'primary' | 'light'
   onClick?: () => void
 }
 
-const Button = ({
-  children,
-  disabled = false,
-  type = 'primary',
-  onClick,
-}: IButtonProps) => {
+const Button = ({ children, disabled = false, onClick }: IButtonProps) => {
   const disabledClass = disabled ? 'btn--disabled' : ''
-  const typeClass = type === 'primary' ? 'btn--primary' : 'btn--light'
-  const className = `btn ${[disabledClass, typeClass]
-    .filter((el) => el !== '')
-    .join(' ')}`
+  const className = `btn${disabledClass}`
 
   return (
     <button className={className} onClick={onClick}>

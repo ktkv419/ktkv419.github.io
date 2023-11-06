@@ -3,12 +3,13 @@
   gap: 0.8rem;
 
   .progress-dot {
-    width: 0.6rem;
-    height: 0.6rem;
-    background-color: #f5f5f5;
-    border-radius: 50%;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--color-gray-light);
+    border-radius: 50rem;
 
     &--active {
+      width: 1.6rem;
       background: var(--color-black);
     }
   }

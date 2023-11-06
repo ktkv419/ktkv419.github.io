@@ -1,28 +1,20 @@
 .btn {
   outline: none;
   border: none;
-  background: none;
-  transition: all 0.5s;
-  transform: scale(1);
-
-  &:active {
-    transform: scale(0.98);
-  }
-
-  &--primary {
-    background: var(--color-black);
-    color: var(--color-white);
-    padding: 1.3rem 2.6rem;
-    border-radius: 50rem;
-  }
-
-  &--light {
-    color: var(--color-grey);
-  }
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 1.3rem 2.6rem;
+  border-radius: 50rem;
 
   &--disabled {
     background: #212529cc;
     pointer-events: none;
     cursor: not-allowed;
+  }
+
+  &:active {
+    background-color: var(--color-white);
+    outline: solid 1px var(--color-black);
+    color: var(--color-black);
   }
 }

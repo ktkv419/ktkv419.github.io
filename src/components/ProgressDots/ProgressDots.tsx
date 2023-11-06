@@ -7,7 +7,6 @@ interface IDotProps {
 }
 
 interface IProgressDotsProps {
-  allSteps: number
   currStep: number
 }
 
@@ -19,8 +18,8 @@ const Dot = ({ active }: IDotProps) => {
   )
 }
 
-const ProgressDots = ({ allSteps, currStep }: IProgressDotsProps) => {
-  const steps = [...Array(allSteps)].map((el, i) => (
+const ProgressDots = ({ currStep }: IProgressDotsProps) => {
+  const steps = [...Array(4)].map((el, i) => (
     <Dot key={nanoid()} active={i === currStep} />
   ))
 

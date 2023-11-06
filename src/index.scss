@@ -2,19 +2,18 @@
 @import './assets/css/mixins.scss';
 
 :root {
-  --fz-h1: 1.6rem;
-  --fz-h2: 1.4rem;
-  --fz-h3: 1.2rem;
+  --fz-h1: 1.8rem;
+  --fz-h2: 1.6rem;
+  --fz-h3: 1.4rem;
 
-  --lh-h1: 1.92rem;
-  --lh-h2: 1.68rem;
-  --lh-h3: 1.44rem;
+  // --lh-h1: 1.92rem;
+  // --lh-h2: 1.68rem;
+  // --lh-h3: 1.44rem;
 
   --color-white: #ffffff;
-  --color-black: #212529;
-  --color-grey: #7b7b7b;
-
-  --color-black-inactive: #212529cc;
+  --color-black: #1c1c1e;
+  --color-grey: #8c8c8c;
+  --color-gray-light: #c8c8c8;
 }
 
 *,
@@ -29,16 +28,12 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  // background-color: black;
 }
 
 body {
   line-height: 1.6;
   font-size: 1.6rem;
   background-color: var(--color-white);
-  // width: 39rem;
-  // height: 66rem;
-  overflow-x: hidden;
 }
 
 h1,

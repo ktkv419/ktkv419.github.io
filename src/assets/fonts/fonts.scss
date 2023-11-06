@@ -12,6 +12,12 @@
 
 @font-face {
   font-family: 'Stolzl';
+  font-weight: 350;
+  src: local('Stolzl'), url('./stolzl_book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Stolzl';
   font-weight: 400;
   src: local('Stolzl'), url('./stolzl_regular.otf') format('opentype');
 }
