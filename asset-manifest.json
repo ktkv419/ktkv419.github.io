@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.edea2196.css",
-    "main.js": "/static/js/main.6744d9cd.js",
+    "main.css": "/static/css/main.b95f0238.css",
+    "main.js": "/static/js/main.354956f1.js",
     "static/js/787.d51a8694.chunk.js": "/static/js/787.d51a8694.chunk.js",
-    "static/media/stolzl_regular.otf": "/static/media/stolzl_regular.09efdd722e42778da31b.otf",
     "static/media/stolzl_medium.otf": "/static/media/stolzl_medium.37a1ad5e0454ca26a278.otf",
+    "static/media/stolzl_regular.otf": "/static/media/stolzl_regular.9603d48be34f3721c9c6.otf",
+    "static/media/stolzl_book.otf": "/static/media/stolzl_book.f704a6bc23525bfd6d06.otf",
     "static/media/stolzl_light.otf": "/static/media/stolzl_light.1e36ec5d20b6eec6aa2e.otf",
     "static/media/stolzl_bold.otf": "/static/media/stolzl_bold.e7dbff6869476c4643de.otf",
     "static/media/stolzl_thin.otf": "/static/media/stolzl_thin.1c03e95b385d1bfa668c.otf",
     "index.html": "/index.html",
-    "main.edea2196.css.map": "/static/css/main.edea2196.css.map",
-    "main.6744d9cd.js.map": "/static/js/main.6744d9cd.js.map",
+    "main.b95f0238.css.map": "/static/css/main.b95f0238.css.map",
+    "main.354956f1.js.map": "/static/js/main.354956f1.js.map",
     "787.d51a8694.chunk.js.map": "/static/js/787.d51a8694.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edea2196.css",
-    "static/js/main.6744d9cd.js"
+    "static/css/main.b95f0238.css",
+    "static/js/main.354956f1.js"
   ]
 }
