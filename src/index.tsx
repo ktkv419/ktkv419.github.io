@@ -4,18 +4,16 @@ import reportWebVitals from './reportWebVitals'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './index.scss'
 import Debug from './layout/Debug'
+import App from './App'
 import Onboarding from './layout/Onboarding/Onboarding'
-
-export const tg = window.Telegram.WebApp
-
-tg.expand()
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Onboarding />,
+    element: <App />,
+    children: [{ index: true, element: <Onboarding /> }],
   },
   {
     path: '/debug',

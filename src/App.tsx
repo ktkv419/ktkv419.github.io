@@ -1,23 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
-window.navigator.vibrate(10000)
-navigator.vibrate(10000)
+export const tg = window.Telegram.WebApp
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Link to={'/tutorial'}>Tutorial</Link>
-      </header>
-    </div>
-  )
+  useEffect(() => {
+    tg.expand()
+  }, [])
+  return <Outlet />
 }
 
 export default App

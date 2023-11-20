@@ -1,17 +1,23 @@
-import { PropsWithChildren } from 'react'
+import { MouseEventHandler, PropsWithChildren } from 'react'
 import './Button.scss'
 
 interface IButtonProps extends PropsWithChildren {
   disabled?: boolean
-  onClick?: () => void
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined
+  type?: 'submit' | 'button' | 'reset' | undefined
 }
 
-const Button = ({ children, disabled = false, onClick }: IButtonProps) => {
+const Button = ({
+  children,
+  disabled = false,
+  onClick,
+  type = undefined,
+}: IButtonProps) => {
   const disabledClass = disabled ? 'btn--disabled' : ''
   const className = `btn${disabledClass}`
 
   return (
-    <button className={className} onClick={onClick}>
+    <button className={className} type={type} onClick={onClick}>
       {children}
     </button>
   )
